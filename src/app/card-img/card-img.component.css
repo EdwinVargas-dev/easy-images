@@ -1,0 +1,5 @@
+.body-card-over {
+    position: absolute;
+    background-color: rgba(250,250,250,0.9);
+    height: 100%;
+}

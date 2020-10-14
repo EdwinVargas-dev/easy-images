@@ -1,0 +1,17 @@
+<div class="card shadow-sm" data-toggle="modal" data-target="#cardModal">
+    <img src="{{detailDataPhoto.largeImageURL}}" class="w-100" alt="">
+    <div id="cardBody" class="card-body">
+        <div class="d-flex align-items-center">
+            <span class="badge badge-success mr-1" *ngFor="let tag of convertTagsInArray()">{{tag}}</span>
+        </div>
+        <div class="media mt-3">
+            <img src="{{detailDataPhoto.userImageURL}}" class="mr-3 w-12 rounded-circle" alt="UserPhoto">
+            <div class="media-body">
+                <small>Photography by:</small>
+                <h5>{{detailDataPhoto.user}}</h5>
+                <small class="mr-3"><fa-icon [icon]="icons.faThumbsUp" class="text-info"></fa-icon> {{detailDataPhoto.likes}}</small>
+                <small><fa-icon [icon]="icons.faEye" class="text-info"></fa-icon> {{detailDataPhoto.views}}</small>
+            </div>
+        </div>
+    </div>
+</div>

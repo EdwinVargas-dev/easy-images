@@ -1,0 +1,35 @@
+<nav class="navbar fixed-top navbar-expand-lg navbar-light" style="background-color: #e3f2fd;">
+  <a class="navbar-brand" href="#">
+    <img src="./../../assets/img/EasyImages.co.png" width="150" alt="" loading="lazy">
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-3"></ul>
+    <form class="form-inline my-2 my-lg-0">
+      <ul class="navbar-nav mr-3">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Categories
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" (click)="getPhotosOfService ('science',null)">Science</a>
+            <a class="dropdown-item" (click)="getPhotosOfService ('education',null)">Education</a>
+            <a class="dropdown-item" (click)="getPhotosOfService ('people',null)">People</a>
+            <a class="dropdown-item" (click)="getPhotosOfService ('feelings',null)">Feelings</a>
+            <a class="dropdown-item" (click)="getPhotosOfService ('computer',null)">Computer</a>
+            <a class="dropdown-item" (click)="getPhotosOfService ('buildings',null)">Buildings</a>
+          </div>
+        </li>
+      </ul>
+      <input class="form-control mr-sm-2" type="search" [(ngModel)]="textToSearch" [ngModelOptions]="{standalone: true}"
+        placeholder="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0"
+        (click)="getPhotosOfService(null, textToSearch)">Search</button>
+    </form>
+  </div>
+</nav>
